@@ -14,7 +14,12 @@
 
 from hashlib import md5
 from six import BytesIO
-from six.moves import cPickle
+
+# Get the ZODB._compat module to be the pickler to pick up support for protocol 3 
+# and such on on Python 2
+# from six.moves import cPickle
+from ZODB import _compat as cPickle
+
 import logging
 import os
 import sys
