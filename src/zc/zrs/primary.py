@@ -352,7 +352,7 @@ class PrimaryProducer:
             self.iterator.stop()
 
         picklerf = BytesIO()
-        pickler = cPickle.Pickler(picklerf, 1)
+        pickler = cPickle.Pickler(picklerf, cPickle._protocol)
         pickler.fast = 1
         def dump(data):
             picklerf.seek(0)
