@@ -1,5 +1,28 @@
+*.[oa]
+*.py[co]
+*~
+~*
+.DS_Store
+*.bak
+*.orig*
+*.swp*
+*.#*
+
+# Buildout turds
 /bin
-/develop-eggs
-/dist
 /parts
-/.installed.cfg
+/eggs
+/.eggs
+/develop-eggs
+.installed.cfg
+
+# setuptools turds
+/build
+/dist
+/*.egg
+*.egg-info
+
+# test turds
+/coverage
+*.prof
+/.tox
