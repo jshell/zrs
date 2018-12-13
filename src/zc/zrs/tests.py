@@ -32,7 +32,10 @@ import ZODB.tests.testblob
 import ZODB.tests.testFileStorage
 import ZODB.tests.StorageTestBase
 import ZODB.utils
-from six.moves import cPickle
+# Get the ZODB._compat module to be the pickler to pick up support for protocol 3
+# and such on on Python 2
+# from six.moves import cPickle
+from ZODB import _compat as cPickle
 import logging
 import mock
 import os
